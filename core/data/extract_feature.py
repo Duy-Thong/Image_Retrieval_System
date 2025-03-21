@@ -13,6 +13,8 @@ def get_files_in_folder(path_folder):
 def extract_sunset_features(image_path):
     # Read the image from the path
     image = cv2.imread(image_path)
+    image = cv2.resize(image, (400, 267))
+    
     if image is None:
         raise ValueError("Unable to read the image from the provided path.")
     
