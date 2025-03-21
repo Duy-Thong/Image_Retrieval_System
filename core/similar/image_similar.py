@@ -17,7 +17,7 @@ def feature_fusion(feature_image):
             features.extend(value)
     return features
 
-def similar_most_image(src_image, path_dataset_image):
+def similar_most_image(src_image, path_dataset_image, num):
     features = extract_sunset_features(src_image)
     dataset_image = load_json(path_dataset_image)
     name_score = [
@@ -25,7 +25,7 @@ def similar_most_image(src_image, path_dataset_image):
         for item in dataset_image
     ]
     name_score.sort(key=lambda x : x[1])
-    print_image_similar(name_score[:5])
+    print_image_similar(name_score[:num])
 
 def print_image_similar(name_score):
     print("Image the most similar:")
@@ -34,9 +34,10 @@ def print_image_similar(name_score):
     print("-----------------------")
     
 if __name__ == "__main__":
-    path_image = "images_csdldpt/_5ZRUj5FEZY.jpg"
+    path_image = "images_csdldpt/AKVED48oXJo.jpg"
     path_dataset = "data_storage/json/feature_extract.json"
-    similar_most_image(path_image, path_dataset)
+    num = 20
+    similar_most_image(path_image, path_dataset, num)
     
     
 
