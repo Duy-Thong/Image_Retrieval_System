@@ -34,8 +34,8 @@ def print_image_similar(name_score):
     print("-----------------------")
     
 if __name__ == "__main__":
-    path_image = "images_csdldpt/AKVED48oXJo.jpg"
-    path_dataset = "data_storage/json/feature_extract.json"
+    path_image = "images_csdldpt/FlvXVzB87gM.jpg"
+    path_dataset = "data_storage/json/feature_extract_800_533.json"
     num = 20
     similar_most_image(path_image, path_dataset, num)
     

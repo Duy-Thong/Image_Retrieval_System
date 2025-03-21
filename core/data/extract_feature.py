@@ -13,7 +13,7 @@ def get_files_in_folder(path_folder):
 def extract_sunset_features(image_path):
     # Read the image from the path
     image = cv2.imread(image_path)
-    image = cv2.resize(image, (400, 267))
+    image = cv2.resize(image, (800, 533))
     
     if image is None:
         raise ValueError("Unable to read the image from the provided path.")
@@ -90,7 +90,7 @@ def save_feature(data, path):
 
 if __name__ == "__main__":
     path_folder = "/home/vutuyen/Documents/W_SUZERAIN_W5/Project/Image_Retrieval_System/images_csdldpt"
-    path_save = "/home/vutuyen/Documents/W_SUZERAIN_W5/Project/Image_Retrieval_System/data_storage/json/feature_extract.json"
+    path_save = "/home/vutuyen/Documents/W_SUZERAIN_W5/Project/Image_Retrieval_System/data_storage/json/feature_extract_800_533.json"
     length = 295
     paths = get_files_in_folder(path_folder=path_folder)[:length]
     ls_features = multiprocess(paths=paths)
