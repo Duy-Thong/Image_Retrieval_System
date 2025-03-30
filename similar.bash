@@ -1,0 +1,1 @@
+python -m core.similar.image_similar

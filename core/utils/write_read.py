@@ -6,5 +6,5 @@ def load_json(path):
         data = json.load(file)
     return data
 
-data = load_json("/home/vutuyen/Documents/W_SUZERAIN_W5/Project/Image_Retrieval_System/data_storage/json/feature_extract.json")
-print(data[0])
+# data = load_json("/home/vutuyen/Documents/W_SUZERAIN_W5/Project/Image_Retrieval_System/data_storage/json/feature_extract.json")
+# print(data[0])
